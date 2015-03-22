@@ -1,0 +1,69 @@
+<section data-ng-controller="ProductsController">
+    <div class="page-header">
+        <h1>New Product</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Nombre</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="product.name" id="name" class="form-control" placeholder="Nombre" required>
+                    </div>
+                </div>
+
+				<div class="form-group">
+					<label class="control-label" for="code">Codigo</label>
+					<div class="controls">
+						<input type="text" data-ng-model="product.code" id="code" class="form-control" placeholder="Codigo" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="percentage">Porcentaje</label>
+					<div class="controls">
+						<input type="number" data-ng-model="product.percentage" id="percentage" class="form-control" placeholder="Porcentage" >
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="buyPrice">Precio de compra</label>
+					<div class="controls">
+						<input type="number" data-ng-model="product.buyPrice" id="buyPrice" class="form-control" placeholder="Precio de compra" >
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="stock">Stock</label>
+					<div class="controls">
+						<input type="number" data-ng-model="product.stock" id="stock" class="form-control" placeholder="Stock" >
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="minStock">Stock minimo</label>
+					<div class="controls">
+						<input type="number" data-ng-model="product.minStock" id="minStock" class="form-control" placeholder="Stock minimo" >
+					</div>
+				</div>
+
+				<!--<div class="form-group">-->
+					<!--<label class="control-label" for="minStock">Tipo de producto</label>-->
+					<!--<div class="controls">-->
+						<!--<select ng-model="product.productType" class="form-control" ng-options="type.name for type in productTypes"></select>-->
+					<!--</div>-->
+				<!--</div>-->
+
+				<div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+
+

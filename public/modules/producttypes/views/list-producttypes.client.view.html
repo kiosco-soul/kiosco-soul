@@ -1,0 +1,16 @@
+<section data-ng-controller="ProducttypesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Tipos de Productos</h1>
+    </div>
+    <div class="list-group">
+
+		<table tr-ng-grid="" items="producttypes"
+			   fields="['name']"
+			   selected-items="selected"
+			   selection-mode="SingleRow">
+		</table>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!producttypes.$resolved || producttypes.length">
+    	No Producttypes yet, why don't you <a href="/#!/producttypes/create">create one</a>?
+    </div>
+</section>
